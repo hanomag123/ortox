@@ -7134,6 +7134,8 @@ html:not(.tablet):not(.mobile) .profile-minimal-caption {
 .layout-navbar-demo .rd-navbar-fixed .rd-navbar-panel {
 	position: relative;
 	z-index: 10;
+
+	
 }
 
 .layout-navbar-demo .rd-navbar-fixed .rd-navbar-nav-wrap {
@@ -10078,6 +10080,8 @@ html.tablet .ui-to-top {
 	cursor: pointer;
 	color: #313131;
 	display: none;
+
+	
 }
 
 .rd-navbar-collapse-toggle::-moz-focus-inner {
@@ -10778,6 +10782,10 @@ html.tablet .ui-to-top {
 	align-items: center;
 	height: 75px;
 	padding: 8px;
+
+	@include breakpoint($bm-bp) {
+        flex-flow: row-reverse;
+    }
 }
 
 .rd-navbar-fixed .rd-navbar-nav-wrap {

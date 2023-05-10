@@ -1,0 +1,53 @@
+footer {
+    background: #F9FFFF;
+    border-radius: 0.3rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+    
+
+    ul {
+        width: 11.1%;
+        display: flex;
+        flex-direction: column;
+        gap: 1.7rem;
+
+        .footer-content__title {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 1.6rem;
+            line-height: 2rem;
+            color: #003837;
+        }
+
+        .footer-content__alarmBtn {
+            a {
+                font-weight: 400;
+                font-size: 1.6rem;
+                line-height: 3rem;
+                color: #D51022;
+            }
+        }
+    }
+
+    .footer-content__lastColumn {
+        width: 25.5%;
+    }
+
+    .footer-content__confidence {
+        margin-top: 1.3rem;
+        a {
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 2rem;
+            text-decoration-line: underline;
+            color: rgba(0, 155, 151, 0.5);
+            white-space: nowrap;   
+        }
+    }
+}

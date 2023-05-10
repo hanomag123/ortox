@@ -1,0 +1,12 @@
+.rd-navbar-collapse-toggle {
+    @include breakpoint($bm-bp) {
+      display: none;
+    }
+}
+
+.rd-navbar-panel {
+
+	@include breakpoint($bm-bp) {
+        flex-flow: row-reverse !important;
+    }
+}

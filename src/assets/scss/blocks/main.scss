@@ -8,6 +8,7 @@
   transform: translate3d(0,0,0);
   position: absolute;
   width: 100%;
+  z-index: 111;
 }
 
 
@@ -943,3 +944,4 @@ textarea.page-input {
 .callback-button {
   width: max-content;
 }
+
