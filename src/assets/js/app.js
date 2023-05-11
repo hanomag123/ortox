@@ -29,8 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
       new Swiper(el, {
         loop: true,
         speed: 400,
-        slidesPerView: 'auto',
-        spaceBetween: 0,
+        slidesPerView: 3,
+        spaceBetween: 30,
         slidesPerGroup: 3,
         navigation: {
           nextEl: el.parentElement.querySelector('.next'),
@@ -43,6 +43,13 @@ document.addEventListener("DOMContentLoaded", () => {
             return `<span class="actions-bullet swiper-pagination-bullet"></span>`; 
           },
         },
+
+        breakpoints: {
+
+          850: {
+              slidesPerView: 'auto',
+          },
+        }
       })
     })
   }

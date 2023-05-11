@@ -1,6 +1,6 @@
 .rd-navbar-collapse-toggle {
     @include breakpoint($bm-bp) {
-      display: none;
+      display: none !important;
     }
 }
 
