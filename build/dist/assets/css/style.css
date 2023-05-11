@@ -489,6 +489,7 @@ html {
   transform: translate3d(0, 0, 0);
   position: absolute;
   width: 100%;
+  z-index: 111;
 }
 
 .main-block {
@@ -1208,6 +1209,11 @@ html {
   margin-left: auto;
   margin-right: 2rem;
 }
+@media (max-width: 1440px) {
+  .consult-text-block {
+    margin-right: 0;
+  }
+}
 
 .consult-title {
   font-family: "Montserrat";
@@ -1420,4 +1426,62 @@ textarea.page-input {
 
 .callback-button {
   width: max-content;
+}
+
+footer {
+  background: #F9FFFF;
+  border-radius: 0.3rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 6rem;
+  padding-bottom: 3rem;
+}
+.footer-content ul {
+  width: 11.1%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.7rem;
+}
+.footer-content ul .footer-content__title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: #003837;
+}
+.footer-content ul .footer-content__alarmBtn a {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 3rem;
+  color: #D51022;
+}
+.footer-content .footer-content__lastColumn {
+  width: 25.5%;
+}
+.footer-content .footer-content__confidence {
+  margin-top: 1.3rem;
+}
+.footer-content .footer-content__confidence a {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 2rem;
+  text-decoration-line: underline;
+  color: rgba(0, 155, 151, 0.5);
+  white-space: nowrap;
+}
+
+.rd-navbar-panel {
+  flex-flow: row-reverse;
+}
+
+@media (max-width: 850px) {
+  .rd-navbar-fixed .rd-navbar-nav-wrap {
+    transform: translateX(110%);
+    right: 0;
+    left: unset;
+  }
 }

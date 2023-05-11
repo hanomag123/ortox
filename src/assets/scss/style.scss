@@ -71,6 +71,7 @@ html {
 }
 
 @import './blocks/main.scss';
+@import './blocks/footer.scss';
 // .hide {
 //   display: none;
 // }
@@ -113,4 +114,16 @@ html {
 //     object-fit: cover;
 //   }
 // }
+
+.rd-navbar-panel {
+  flex-flow: row-reverse;
+}
+
+.rd-navbar-fixed .rd-navbar-nav-wrap {
+  @include breakpoint($bm-bp) {
+    transform: translateX(110%);
+    right: 0;
+    left: unset;
+  }
+}
 
