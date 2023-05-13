@@ -8,6 +8,11 @@
         font-size: 1.6rem;
         line-height: 2.6rem;
         color: rgba(0, 56, 55, 0.5);
+
+        @include breakpoint($sm-bp) {
+            font-size: 1.2rem;
+            line-height: 2rem;
+        }
     }
 }
 
@@ -16,6 +21,15 @@
     align-items: center;
     width: 100%;
 
+    @include breakpoint($xl-bp) {
+        flex-direction: column-reverse;
+        gap: 7rem;
+    }
+
+    @include breakpoint($sm-bp) {
+        gap: 4rem;
+    }
+
     .services-header__leftBlock {
         display: flex;
         flex-direction: column;
@@ -23,8 +37,28 @@
         width: 50%;
         align-items: center;
 
+        @include breakpoint($xl-bp) {
+            width: 100%;
+        }
+
         .services-header__leftBlock_content {
             width: 60%;
+
+            @include breakpoint($sem-bp) {
+                width: 80%;
+            }
+
+            @include breakpoint($xl-bp) {
+                width: 100%;
+                padding-left: 3rem;
+                padding-right: 3rem;
+            }
+
+            @include breakpoint($sm-bp) {
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+
             p {
                 font-family: 'Montserrat';
                 font-style: normal;
@@ -32,6 +66,11 @@
                 font-size: 1.8rem;
                 line-height: 3rem;
                 color: #4F4F4F;
+
+                @include breakpoint($sm-bp) {
+                    font-size: 1.5rem;
+                    line-height: 3rem;
+                }
             }
     
             h1 {
@@ -42,12 +81,39 @@
                 line-height: 7rem;
                 color: #4F4F4F;
                 margin-top: 4rem;
+
+                @include breakpoint($xl-bp) {
+                    margin-top: 3rem;
+                }
+
+                @include breakpoint($sm-bp) {
+                    font-size: 2.5rem;
+                    line-height: 2.8rem;
+                    margin-top: 2rem;
+                }
+            }
+
+            a {
+                @include breakpoint($xl-bp) {
+                    margin-top: 4rem;
+                }
+
+                @include breakpoint($sm-bp) {
+                    margin-top: 2rem;
+                    padding: 1.5rem 2rem 2rem 1.5rem;
+                    font-size: 1.5rem;
+                    line-height: 3rem;
+                }
             }
         }    
     }
 
     .services-header__rightBLock {
         width: 50%;
+
+        @include breakpoint($xl-bp) {
+            width: 100%;
+        }
 
         img {
             width: 100%;
@@ -62,10 +128,22 @@
     flex-direction: column;
     gap: 6rem;
 
+    @include breakpoint($sem-bp) {
+        gap: 5rem;
+    }
+
+    @include breakpoint($sm-bp) {
+        gap: 2rem;
+    }
+
     .services-price__searchContainer {
         width: 38rem;
         margin: 0 auto;
         position: relative;
+
+        @include breakpoint($sm-bp) {
+            width: 100%;
+        }
 
         input {
             padding: 2rem;
@@ -79,6 +157,7 @@
             backdrop-filter: blur(4.6rem);
             border-radius: 0.5rem;
             width: 100%;
+            outline: none;
         }
 
         svg {
@@ -91,5 +170,129 @@
             transform: translate(0%, -50%);
         }
     
+    }
+
+    .services-price__contentContainer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2.7rem;
+        justify-content: center;
+
+        @include breakpoint($sm-bp) {
+            margin-top: 2rem;
+        }
+
+        .services-price__item {
+            position: relative;
+            width: 23.3%;
+            @include breakpoint($sem-bp) {
+                width: 31.3%;
+            }
+
+            @include breakpoint($xl-bp) {
+                width: 47%;
+            }
+
+            @include breakpoint($sm-bp) {
+                width: 100%;
+            }
+
+            button {
+                padding: 0rem;
+                background: rgba(251, 251, 251, 0.63);
+                border: 0.1rem solid #F1F1F1;
+                backdrop-filter: blur(0.45rem);
+                border-radius: 1.85rem;
+                padding: 2rem 2.7rem;
+                display: flex;
+                gap: 1.5rem;
+
+                .services-price__img {
+                    width: 9rem;
+                    height: 6rem;
+                    object-fit: contain;
+                    fill: #009B97;
+                    stroke: #009B97;
+                    transition: all .25s;
+                }
+
+                .services-price__btnTitle {
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 1.5rem;
+                    line-height: 2.3rem;
+                    color: #003837;
+                }
+
+                .services-price__arrow {
+                    fill: transparent;
+                    width: 1rem;
+                    height: 1rem;
+                    stroke: #003837;
+                    transition: all .25s;
+                }
+            }
+
+            ul {
+                visibility: hidden;
+                opacity: 0;
+                transition: .35s all cubic-bezier(0.65, 0.05, 0.36, 1);
+                position: absolute;
+                width: auto;
+                padding: 3rem 3rem 4rem 3rem;
+                background: #F9FFFF;
+                border: 0.1rem solid #F1F1F1;
+                backdrop-filter: blur(0.45rem);
+                border-radius: 0px 0px 1.85rem 1.85rem;
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                top: 8.7rem;
+                z-index: 11;
+
+                li {
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 1.5rem;
+                    line-height: 2rem;
+                    color: #003837;
+                }
+            }
+
+            &:hover {
+                
+                .services-price__img {
+                    stroke: #FFFFFF;
+                    fill: #FFFFFF;
+                    transition: all .25s;
+                }
+
+
+
+                .services-price__arrow {
+                    transform: rotate(180deg);
+                    stroke: #CFFFFE;
+                    transition: all .25s;
+                }
+
+                .services-price__btnTitle {
+                    color: #CFFFFE;
+                }
+                
+                button {
+                    background: linear-gradient(180deg, #00B7B2 0%, #009B97 100%);
+                    transition: all 0.35s linear;
+                }
+
+                ul {
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translate3d(0, 0, 0);
+                    transition: .35s all cubic-bezier(0.65, 0.05, 0.36, 1);
+                }
+            }
+        }
     }
 }
