@@ -941,6 +941,11 @@ html {
   display: grid;
   grid-template-columns: max-content 1fr;
 }
+@media (max-width: 500px) {
+  .aboutus-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 .aboutus-wrapper::before, .aboutus-wrapper::after {
   content: "";
   position: absolute;
@@ -968,7 +973,7 @@ html {
 .aboutus-img {
   position: absolute;
   bottom: 0;
-  left: 12rem;
+  left: 5rem;
   height: 100%;
   width: 44.8rem;
   z-index: 1;
@@ -982,7 +987,12 @@ html {
 @media (max-width: 850px) {
   .aboutus-img {
     width: 29.5rem;
-    left: 8rem;
+    left: 2rem;
+  }
+}
+@media (max-width: 500px) {
+  .aboutus-img {
+    width: 27.5rem;
   }
 }
 .aboutus-img img {
@@ -999,7 +1009,6 @@ html {
   width: 44.3rem;
   position: relative;
   margin-left: 6.9rem;
-  overflow: hidden;
 }
 @media (max-width: 1440px) {
   .aboutus-left {
@@ -1012,7 +1021,21 @@ html {
     margin-left: 4.6rem;
   }
 }
-.aboutus-left::before {
+@media (max-width: 500px) {
+  .aboutus-left {
+    height: 46.4rem;
+  }
+}
+.aboutus-left .aboutus-ball {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 0.3rem 7rem 7rem 2rem;
+}
+.aboutus-left .aboutus-ball::before {
   content: "";
   position: absolute;
   display: block;
@@ -1345,7 +1368,7 @@ html {
 }
 @media (max-width: 500px) {
   .results-list {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     margin-top: 1.4rem;
   }
 }
@@ -1356,12 +1379,26 @@ html {
   align-items: center;
   gap: 2rem;
 }
+@media (max-width: 500px) {
+  .results-item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: max-content 23.6rem;
+    grid-auto-flow: column;
+    gap: 1rem;
+  }
+}
 
 .results-img {
   height: 36.3rem;
   width: 100%;
   border-radius: 2rem;
   overflow: hidden;
+}
+@media (max-width: 500px) {
+  .results-img {
+    height: 100%;
+  }
 }
 .results-img img {
   width: 100%;
@@ -1371,6 +1408,11 @@ html {
 .results-img.--bot {
   height: 30.8rem;
   background-color: #009B97;
+}
+@media (max-width: 500px) {
+  .results-img.--bot {
+    height: 100%;
+  }
 }
 .results-img.--bot img {
   mix-blend-mode: hard-light;
@@ -1384,8 +1426,18 @@ html {
   line-height: 2.3rem;
   color: var(--green);
 }
+@media (max-width: 500px) {
+  .results-subtitle {
+    text-align: center;
+  }
+}
 .results-subtitle.--bot {
   order: 4;
+}
+@media (max-width: 500px) {
+  .results-subtitle.--bot {
+    order: unset;
+  }
 }
 @media (max-width: 500px) {
   .results-subtitle {
