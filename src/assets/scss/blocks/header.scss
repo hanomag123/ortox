@@ -1,10 +1,14 @@
 .rd-navbar-collapse-toggle {
-    @include breakpoint($bm-bp) {
+    @include breakpoint($sem-bp) {
       display: none !important;
     }
 }
 
 .rd-navbar-panel {
+
+  @include breakpoint($sem-bp) {
+    justify-content: space-between !important;
+  }
 
 	@include breakpoint($bm-bp) {
         flex-flow: row-reverse !important;
