@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
       new Swiper(el, {
         loop: true,
         speed: 400,
-        slidesPerView: 3,
+        slidesPerView: 1,
         spaceBetween: 30,
         slidesPerGroup: 3,
         navigation: {
@@ -47,7 +47,11 @@ document.addEventListener("DOMContentLoaded", () => {
         breakpoints: {
 
           850: {
-              slidesPerView: 'auto',
+              slidesPerView: 3,
+          },
+
+          500: {
+            slidesPerView: 'auto',
           },
         }
       })
@@ -60,9 +64,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const swiper = new Swiper(el, {
         loop: true,
         speed: 400,
-        slidesPerView: 'auto',
+        slidesPerView: 1,
         spaceBetween: 0,
-        slidesPerGroup: 3,
+        
         navigation: {
           nextEl: el.parentElement.querySelector('.next'),
           prevEl: el.parentElement.querySelector('.prev'),
@@ -82,6 +86,18 @@ document.addEventListener("DOMContentLoaded", () => {
             }
           }
         },
+
+        breakpoints: {
+
+          850: {
+              slidesPerView: 'auto',
+          },
+
+          500: {
+            slidesPerView: 'auto',
+            slidesPerGroup: 3,
+          },
+        }
       })
 
     })
@@ -111,6 +127,5 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   }
 
-
-
+  
 });

@@ -1,0 +1,95 @@
+.bradcrumps {
+    margin-top: 4rem;
+
+    a, span {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+        color: rgba(0, 56, 55, 0.5);
+    }
+}
+
+.services-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    .services-header__leftBlock {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        width: 50%;
+        align-items: center;
+
+        .services-header__leftBlock_content {
+            width: 60%;
+            p {
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 1.8rem;
+                line-height: 3rem;
+                color: #4F4F4F;
+            }
+    
+            h1 {
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 7rem;
+                line-height: 7rem;
+                color: #4F4F4F;
+                margin-top: 4rem;
+            }
+        }    
+    }
+
+    .services-header__rightBLock {
+        width: 50%;
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+
+.services-price {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+
+    .services-price__searchContainer {
+        width: 38rem;
+        margin: 0 auto;
+        position: relative;
+
+        input {
+            padding: 2rem;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1.64rem;
+            line-height: 2rem;
+            color: #003837;
+            border: 0.1rem solid #003837;
+            backdrop-filter: blur(4.6rem);
+            border-radius: 0.5rem;
+            width: 100%;
+        }
+
+        svg {
+            width: 2.5rem;
+            height: 2.5rem;
+            opacity: 0.6;
+            position: absolute;
+            top: 50%;
+            right: 1.5rem;
+            transform: translate(0%, -50%);
+        }
+    
+    }
+}
