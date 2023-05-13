@@ -68,12 +68,32 @@ html {
     padding-left: 3rem;
     padding-right: 3rem;
   }
+
+  @include breakpoint($sm-bp) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.bradcrumpsMargin {
+  margin-top: 7rem !important;
+
+  @include breakpoint($xl-bp) {
+    margin-top: 2rem !important;
+  }
+
+  @include breakpoint($bm-bp) {
+    margin-top: 8rem !important;
+  }
+  
 }
 
 
 
 @import './blocks/main.scss';
 @import './blocks/services.scss';
+@import './blocks/servicesSecond.scss';
+@import './blocks/resultsOfTreatment.scss';
 
 @import './blocks/footer.scss';
 @import './blocks/header.scss';

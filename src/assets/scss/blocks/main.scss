@@ -1214,6 +1214,10 @@
   border-radius: 7rem;
   background-size: cover;
 
+  @include breakpoint($xl-bp) {
+    padding: 10rem 1.9rem;
+  }
+
   @include breakpoint($bm-bp) {
     padding: 10rem 4rem;
   }
