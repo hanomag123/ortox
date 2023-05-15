@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
           el: el.parentElement.querySelector('.swiper-pagination'),
           clickable: true,
           renderBullet: function (index, className) {
-            return `<span class="actions-bullet swiper-pagination-bullet"></span>`; 
+            return `<span class="actions-bullet swiper-pagination-bullet"></span>`;
           },
         },
       })
@@ -40,14 +40,14 @@ document.addEventListener("DOMContentLoaded", () => {
           el: el.parentElement.querySelector('.swiper-pagination'),
           clickable: true,
           renderBullet: function (index, className) {
-            return `<span class="actions-bullet swiper-pagination-bullet"></span>`; 
+            return `<span class="actions-bullet swiper-pagination-bullet"></span>`;
           },
         },
 
         breakpoints: {
 
           850: {
-              slidesPerView: 3,
+            slidesPerView: 3,
           },
 
           500: {
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
       })
     })
   }
-  
+
   const swipers3 = document.querySelectorAll('.reviews__swiper');
   if (swipers3.length) {
     swipers3.forEach(el => {
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
         speed: 400,
         slidesPerView: 1,
         spaceBetween: 0,
-        
+
         navigation: {
           nextEl: el.parentElement.querySelector('.next'),
           prevEl: el.parentElement.querySelector('.prev'),
@@ -75,14 +75,14 @@ document.addEventListener("DOMContentLoaded", () => {
           el: el.parentElement.querySelector('.swiper-pagination'),
           clickable: true,
           renderBullet: function (index, className) {
-            return `<span class="actions-bullet swiper-pagination-bullet"></span>`; 
+            return `<span class="actions-bullet swiper-pagination-bullet"></span>`;
           },
         },
         on: {
           transitionEnd: function () {
             const buttons = document.querySelectorAll('.reviews__swiper .swiper-slide');
             if (buttons.length) {
-              buttons.forEach(el=>el.classList.remove('hover'));
+              buttons.forEach(el => el.classList.remove('hover'));
             }
           }
         },
@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
         breakpoints: {
 
           850: {
-              slidesPerView: 'auto',
+            slidesPerView: 'auto',
           },
 
           500: {
@@ -106,28 +106,88 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function removeHover() {
     if (!event.target.closest('.hover')) {
-      buttons.forEach(el=>el.classList.remove('hover'));
+      buttons.forEach(el => el.classList.remove('hover'));
       document.removeEventListener('click', removeHover);
     }
-    
+
   }
 
   if (buttons.length) {
-    buttons.forEach(el=>{
-      el.addEventListener('click',function () {
+    buttons.forEach(el => {
+      el.addEventListener('click', function () {
         if (!this.classList.contains('hover')) {
-          buttons.forEach(el=>el.classList.remove('hover'));
+          buttons.forEach(el => el.classList.remove('hover'));
           this.classList.add('hover');
           document.addEventListener('click', removeHover);
         } else {
-          buttons.forEach(el=>el.classList.remove('hover'));
+          buttons.forEach(el => el.classList.remove('hover'));
           document.removeEventListener('click', removeHover);
         }
       })
     })
   }
 
-  
+
+  const radioContainers = document.querySelectorAll('.radio-container');
+
+  radioContainers.forEach(function (radioContainer) {
+    radioContainer.addEventListener('click', function () {
+      radioContainers.forEach(function (container) {
+        if (container !== radioContainer) {
+          container.querySelector('input').checked = false;
+        }
+      });
+    });
+  });
+
+
+
+
+  const selectInput = document.querySelector(".select-input");
+  const selectedOption = document.querySelector(".selected-option");
+  const arrow = document.querySelector(".arrow");
+  const optionsContainer = document.querySelector(".options-container");
+
+  const optionsList = document.querySelectorAll(".option");
+
+  selectInput.addEventListener("click", () => {
+    optionsContainer.classList.toggle("active");
+    arrow.classList.toggle("active");
+  });
+
+  optionsList.forEach((option) => {
+    option.addEventListener("click", () => {
+      selectedOption.innerHTML = option.innerHTML;
+      optionsContainer.classList.remove("active");
+      arrow.classList.remove("active");
+    });
+  });
+
+  document.addEventListener("click", (event) => {
+    const isClickInside = selectInput.contains(event.target);
+    if (!isClickInside) {
+      optionsContainer.classList.remove("active");
+      arrow.classList.remove("active");
+    }
+  });
+
+
+
+  let acc = document.getElementsByClassName("accordion");
+  let i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    });
+  }
+
 });
 
 

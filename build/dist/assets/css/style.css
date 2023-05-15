@@ -486,7 +486,7 @@ html {
 }
 
 .bradcrumpsMargin {
-  margin-top: 7rem !important;
+  margin-top: 10rem !important;
 }
 @media (max-width: 1024px) {
   .bradcrumpsMargin {
@@ -2247,56 +2247,213 @@ textarea.page-input {
   margin-top: 8rem;
 }
 
+.resultsOfTreatment-content {
+  margin-bottom: 3rem;
+}
+.resultsOfTreatment-content .resultsOfTreatment-content__selectContainer {
+  display: flex;
+  gap: 5rem;
+  margin-top: 5rem;
+}
+@media (max-width: 500px) {
+  .resultsOfTreatment-content .resultsOfTreatment-content__selectContainer {
+    flex-direction: column;
+  }
+}
 .resultsOfTreatment-content .resultsOfTreatment-content__selectContainer .custom-select {
   position: relative;
-  width: 200px;
-  margin: 20px;
-  font-family: Arial, sans-serif;
-  font-size: 16px;
+  width: 26%;
+  height: 4.5rem;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.3rem;
+  color: rgba(0, 56, 55, 0.5);
+  background: #FFFFFF;
+  border: 0.1rem solid #009B97;
+  backdrop-filter: blur(0.46rem);
+  border-radius: 0.5rem;
 }
-.resultsOfTreatment-content .resultsOfTreatment-content__selectContainer .select-selected {
+@media (max-width: 500px) {
+  .resultsOfTreatment-content .resultsOfTreatment-content__selectContainer .custom-select {
+    width: 100%;
+  }
+}
+.resultsOfTreatment-content .resultsOfTreatment-content__selectContainer .select-input {
+  position: relative;
+  height: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 10px;
-  background-color: #f1f1f1;
-  color: #333;
-  border: none;
+  justify-content: space-between;
+  padding: 0 1rem;
+  border: 0.1rem solid #ccc;
   cursor: pointer;
 }
-.resultsOfTreatment-content .resultsOfTreatment-content__selectContainer .select-selected:hover {
-  background-color: #ddd;
+.resultsOfTreatment-content .resultsOfTreatment-content__selectContainer .selected-option {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.resultsOfTreatment-content .resultsOfTreatment-content__selectContainer .select-items {
+.resultsOfTreatment-content .resultsOfTreatment-content__selectContainer .arrow {
+  border: solid #003837;
+  border-width: 0 0.1rem 0.1rem 0;
+  display: inline-block;
+  padding: 0.4rem;
+  transform: rotate(45deg);
+  opacity: 0.5;
+}
+.resultsOfTreatment-content .resultsOfTreatment-content__selectContainer .arrow.active {
+  transform: rotate(-135deg);
+}
+.resultsOfTreatment-content .resultsOfTreatment-content__selectContainer .options-container {
   position: absolute;
-  z-index: 1;
   top: 100%;
   left: 0;
-  right: 0;
-  max-height: 200px;
+  width: 100%;
+  max-height: fit-content;
   overflow-y: auto;
-  background-color: #f1f1f1;
-  border: 1px solid #ddd;
-  border-top: none;
+  z-index: 1;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 0.1rem solid #ccc;
+  background-color: #fff;
+  box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
   display: none;
 }
-.resultsOfTreatment-content .resultsOfTreatment-content__selectContainer .select-item {
-  display: flex;
-  align-items: center;
-  padding: 10px;
+.resultsOfTreatment-content .resultsOfTreatment-content__selectContainer .options-container.active {
+  display: block;
+}
+.resultsOfTreatment-content .resultsOfTreatment-content__selectContainer .option {
+  padding: 1rem;
   cursor: pointer;
 }
-.resultsOfTreatment-content .resultsOfTreatment-content__selectContainer .select-item:hover {
-  background-color: #ddd;
+.resultsOfTreatment-content .resultsOfTreatment-content__selectContainer .option:hover {
+  background-color: #f2f2f2;
 }
-.resultsOfTreatment-content .resultsOfTreatment-content__selectContainer .select-items div:last-child {
-  border-bottom: none;
+
+.resultsOfTreatment-content__checkboxContainer {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
-.resultsOfTreatment-content .resultsOfTreatment-content__selectContainer .custom-select.open .select-selected {
-  background-color: #ddd;
+@media (max-width: 500px) {
+  .resultsOfTreatment-content__checkboxContainer {
+    gap: 1rem;
+  }
 }
-.resultsOfTreatment-content .resultsOfTreatment-content__selectContainer .custom-select.open .select-items {
+.resultsOfTreatment-content__checkboxContainer .radio-container {
   display: block;
+  position: relative;
+  padding-left: 2.2rem;
+  cursor: pointer;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.3rem;
+  color: #003837;
+}
+.resultsOfTreatment-content__checkboxContainer .radio-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.resultsOfTreatment-content__checkboxContainer .checkmark {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  border: 0.1rem solid #5E8F8F;
+}
+.resultsOfTreatment-content__checkboxContainer .radio-container:hover input ~ .checkmark {
+  background: #FFFFFF;
+}
+.resultsOfTreatment-content__checkboxContainer .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.resultsOfTreatment-content__checkboxContainer .radio-container input:checked ~ .checkmark:after {
+  display: block;
+}
+.resultsOfTreatment-content__checkboxContainer .radio-container .checkmark:after {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  background: #5E8F8F;
+}
+.resultsOfTreatment-content__checkboxContainer p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2.3rem;
+  color: #003837;
+}
+.resultsOfTreatment-content__checkboxContainer label {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.3rem;
+  color: #003837;
+}
+
+.resultsOfTreatment-accordeon .accordion {
+  background-color: #FFFFFF;
+  color: #444;
+  cursor: pointer;
+  padding: 1.8rem;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+@media (max-width: 500px) {
+  .resultsOfTreatment-accordeon .accordion {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.resultsOfTreatment-accordeon .accordion span {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  color: #003837;
+}
+.resultsOfTreatment-accordeon .accordion span .bold {
+  font-weight: 700;
+}
+.resultsOfTreatment-accordeon .panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  border-radius: 1rem 1rem 0px 0px;
+  background: #FFFFFF;
+  margin-bottom: 2rem;
+}
+.resultsOfTreatment-accordeon .panel .results-block {
+  padding-top: 7rem;
+}
+.resultsOfTreatment-accordeon .panel .results-block .results-list {
+  margin-top: 0rem;
+}
+
+.resultsOfTreatment-btnContainer {
+  display: flex;
+  justify-content: center;
 }
 
 .page-text-margin {
@@ -2654,6 +2811,50 @@ footer {
   .rd-navbar-collapse-toggle {
     display: none !important;
   }
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 1rem;
+}
+@media (max-width: 1024px) {
+  .header-content {
+    display: none;
+  }
+}
+.header-content .header-content__phoneContainer {
+  display: flex;
+  gap: 2rem;
+}
+.header-content .header-content__phoneContainer a {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 3rem;
+  color: #003837;
+}
+.header-content .header-content__media {
+  display: flex;
+  gap: 2rem;
+}
+.header-content .header-content__media .header-content__media_alarm {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 2rem;
+  line-height: 3rem;
+  color: #D51022;
+}
+.header-content .header-content__media .header-content__media_watsApp {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 2rem;
+  line-height: 3rem;
+  color: #009B97;
 }
 
 @media (max-width: 1200px) {
