@@ -18,7 +18,7 @@ title: Главная
     <div class="text-18 text-black mobilePadding">«Ваш первый шаг в здоровое будущее...»</div>
     <h1 class="h1 text-green main-title mobilePadding">Помогаем восстановить подвижность детям <br>и взрослым</h1>
 
-    <button class="page-button main-button mobileBorder">Обратиться в колл-центр за консультацией</button>
+    <button class="page-button main-button mobileBorder"  data-modal="#consult">Обратиться в колл-центр за консультацией</button>
   </section>
 
   <section class="services page-container">
@@ -338,7 +338,7 @@ title: Главная
           </li>
           <li class="consult-item">
             <div>Консультация врача-терапевта</div>
-            <div>1 500р</div>
+            <div>2 000р</div>
           </li>
           <li class="consult-item">
             <div>Приём специалиста по лечебной физкультуре</div>
@@ -477,3 +477,32 @@ title: Главная
   </section>
 
   <div class="page-margin last-margin"></div>
+
+
+  <section class="regModal modal-overlay" id="consult" hidden>
+    <div class="modal-block">
+
+      <button class="close-button">
+        <svg>
+          <use href='#crossIcon'></use>
+        </svg>
+      </button>
+
+      <h2 class="page-title">Получить бесплатную консультацию</h2>
+
+      <form class="modal-form">
+        <input type="text" name="name" class="page-input --b-green" placeholder="Ваше имя*" required>
+        <input type="tel" name="tel" class="page-input --b-green" placeholder="Ваш телефон*" required>
+        <div class="modal-wrapper">
+          <div class="modal-text">* Обязательные поля для заполнения</div>
+          <button type="submit" class="modal-button">Отправить</button>
+          <label class="modal-agree">
+            <input type="checkbox" required>
+            <!-- <div class="checkbox"></div> -->
+            Я прочитал <a href="#">Согласие на обработку персональных данных</a> и согласен с условиями
+          </label>
+        </div>
+      </form>
+
+    </div>
+  </section>

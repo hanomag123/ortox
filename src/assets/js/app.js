@@ -64,9 +64,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const swiper = new Swiper(el, {
         loop: true,
         speed: 400,
-        slidesPerView: 1,
+        slidesPerView: 'auto',
         spaceBetween: 0,
-
+        slidesPerGroup: 1,
         navigation: {
           nextEl: el.parentElement.querySelector('.next'),
           prevEl: el.parentElement.querySelector('.prev'),
@@ -91,11 +91,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
           850: {
             slidesPerView: 'auto',
+            slidesPerGroup: 3,
           },
 
           500: {
             slidesPerView: 'auto',
-            slidesPerGroup: 3,
+            slidesPerGroup: 2,
           },
         }
       })
@@ -190,6 +191,118 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+function modalHandler() {
+  const modal = document.querySelector(`${this.dataset?.modal}`) || this
+  if (modal.classList.contains('regModal') && modal.hidden) {
+    disableScroll();
+  } else {
+    enableScroll();
+  }
+  if (modal) {
+    if (modal.hidden) {
+      modal.hidden = !modal.hidden
+      modal.style.setProperty('pointer-events', 'auto');
+      setTimeout(() => {
+        modal.style.opacity = 1
+      }, 10);
+    } else {
+      modal.style.opacity = 0
+      modal.style.setProperty('pointer-events', null);
+      const numb = Number(getComputedStyle(modal).transitionDuration.match(/(\d+\.\d+)|(\d+)/g)[0]);
+      if (numb > 0) {
+        modal.addEventListener('transitionend', hideaftertransition);
+      } else {
+        modal.hidden = true
+      }
+    }
+  }
+}
+
+const regModal = document.querySelectorAll('.regModal');
+
+if (regModal) {
+  regModal.forEach(el => {
+    el.addEventListener('click', function () {
+      if (event.target.classList.contains('regModal')) {
+        modalHandler.apply(this);
+      }
+    });
+    const closeButton = el.querySelector('.close-button');
+    if (closeButton) {
+      closeButton.addEventListener('click', () => {
+        modalHandler.apply(el);
+      });
+    }
+  });
+}
+
+const buttonsModal = document.querySelectorAll('[data-modal]');
+
+function hideaftertransition() {
+  this.hidden = true
+  this.removeEventListener('transitionend', hideaftertransition);
+}
+
+if (buttonsModal.length) {
+  buttonsModal.forEach(el => el.addEventListener('click', modalHandler));
+
+}
+
+function addMask() {
+  [].forEach.call(document.querySelectorAll('input[type="tel"]'), function (input) {
+    let keyCode;
+    function mask(event) {
+      event.keyCode && (keyCode = event.keyCode);
+      let pos = this.selectionStart;
+      if (pos < 3) event.preventDefault();
+      let matrix = "+7 (___) ___-__-__",
+        i = 0,
+        def = matrix.replace(/\D/g, ""),
+        val = this.value.replace(/\D/g, ""),
+        new_value = matrix.replace(/[_\d]/g, function (a) {
+          return i < val.length ? val.charAt(i++) || def.charAt(i) : a
+        });
+      i = new_value.indexOf("_");
+      if (i != -1) {
+        i < 5 && (i = 3);
+        new_value = new_value.slice(0, i);
+      }
+      let reg = matrix.substr(0, this.value.length).replace(/_+/g,
+        function (a) {
+          return "\\d{1," + a.length + "}"
+        }).replace(/[+()]/g, "\\$&");
+      reg = new RegExp("^" + reg + "$");
+      this.parentElement.classList.remove('error');
+      if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) this.value = new_value;
+      if (event.type == "blur" && this.value.length < 5) this.value = ""
+    }
+
+    input.addEventListener("input", mask, false);
+    input.addEventListener("focus", mask, false);
+    input.addEventListener("blur", mask, false);
+    input.addEventListener("keydown", mask, false);
+
+  });
+
+}
+addMask();
+
+function disableScroll() {
+  // Get the current page scroll position
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+  document.documentElement.style.setProperty('scroll-behavior', 'auto');
+
+  // if any scroll is attempted, set this to the previous value
+  window.onscroll = function () {
+    window.scrollTo(scrollLeft, scrollTop);
+  };
+}
+
+function enableScroll() {
+  document.documentElement.style.setProperty('scroll-behavior', null);
+  window.onscroll = function () { };
+}
 
 
 
