@@ -104,13 +104,16 @@
           </div>
           
           <div class="header-content">
-            <div class="header-content__phoneContainer">
-              <a href="tel:88002228331">8 800 222 83 31</a>
-              <a href="tel:88002228331">8 800 222 83 31</a>
+            <div class="header-content__wrapper">
+              <svg><use href='#phoneIcon'></use></svg>
+              <div class="header-content__phoneContainer">
+                <a href="tel:+88002228331">8 800 222 83 31</a>
+                <a href="tel:+88002228331">8 800 222 83 31</a>
+              </div>
             </div>
 
             <div class="header-content__media">
-              <a class="header-content__media_alarm" href="#">Экстренный прием</a>
+              <button class="header-content__media_alarm" data-modal="#callbackmodal">Экстренный прием</button>
               <a class="header-content__media_watsApp" href="#">Записаться в WhatsApp</a>
             </div>
           </div>

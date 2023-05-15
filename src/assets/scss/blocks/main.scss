@@ -45,6 +45,9 @@
     margin-bottom: 4.5rem;
     margin-top: 6.9rem;
   }
+  @include breakpoint($sm-bp) {
+    margin-top: 5.9rem;
+  }
 
   img {
     width: 100%;
@@ -1131,6 +1134,7 @@
   @include breakpoint($sm-bp) {
     padding-left: 0rem;
     padding-right: 0rem;
+    margin-top: 2.5rem;
   }
 
   &::before {
@@ -1348,6 +1352,7 @@ textarea.page-input {
   max-height: 100%;
   overflow: auto;
   position: relative;
+  max-width: 102.8rem;
   @include breakpoint($xl-bp) {
     padding: 6rem 4rem;
   }
@@ -1461,6 +1466,10 @@ textarea.page-input {
   max-width: 100%;
   border: 0;
   margin-top: 3rem;
+  @include breakpoint($sm-bp) {
+    width: 100%;
+    grid-column: 2 span;
+  }
 }
 
 .modal-wrapper {
@@ -1488,6 +1497,7 @@ textarea.page-input {
   height: 2.8rem;
   border: 0;
   background-color: transparent;
+  padding: 0;
   @include breakpoint($sm-bp) {
     top: 2rem;
     right: 2rem;
@@ -1496,4 +1506,74 @@ textarea.page-input {
     width: 100%;
     height: 100%; 
   }
+}
+
+.header-content__wrapper {
+  display: flex;
+  gap: 1.4rem;
+  align-items: center;
+  svg {
+    width: 2.1rem;
+    height: 2.1rem;
+  }
+}
+
+textarea.modal-textared {
+  margin-top: 3rem;
+  grid-column: 2 span;
+  height: 21.9rem;
+  @include breakpoint($xl-bp) {
+    height: 10rem;
+  }
+  @include breakpoint($sm-bp) {
+    grid-column: 1 span;
+    margin-top: 0;
+  }
+}
+
+.modal-description {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 3.2rem;
+  
+  color: #434343;
+
+  a {
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 3rem;
+    
+    color: #009B97;
+  }
+}
+
+.modal-description-top {
+  margin-top: 3.5rem;
+}
+
+.modal-description-bot {
+  margin-top: 4.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.rd-nav-link {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 4.6rem;
+  /* identical to box height, or 284% */
+  
+  
+  /* Text */
+  
+  color: #003837;
+  
 }
