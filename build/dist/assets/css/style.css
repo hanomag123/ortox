@@ -3081,11 +3081,14 @@ footer {
     margin-top: 4rem;
   }
 }
-.footer-content ul .footer-content__alarmBtn a {
+.footer-content ul .footer-content__alarmBtn button {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 3rem;
   color: #D51022;
+  padding: 0;
+  border: 0;
+  background: transparent;
 }
 .footer-content .footer-content__lastColumn {
   width: 25.5%;

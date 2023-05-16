@@ -68,11 +68,14 @@ footer {
         }
 
         .footer-content__alarmBtn {
-            a {
+            button {
                 font-weight: 400;
                 font-size: 1.6rem;
                 line-height: 3rem;
                 color: #D51022;
+                padding: 0;
+                border: 0;
+                background: transparent; 
             }
         }
     }
