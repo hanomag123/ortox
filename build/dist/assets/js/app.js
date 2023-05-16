@@ -131,15 +131,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const radioContainers = document.querySelectorAll('.radio-container');
 
-  radioContainers.forEach(function (radioContainer) {
-    radioContainer.addEventListener('click', function () {
-      radioContainers.forEach(function (container) {
-        if (container !== radioContainer) {
-          container.querySelector('input').checked = false;
-        }
+  if (radioContainers.length) {
+    radioContainers.forEach(function (radioContainer) {
+      radioContainer.addEventListener('click', function () {
+        radioContainers.forEach(function (container) {
+          if (container !== radioContainer) {
+            container.querySelector('input').checked = false;
+          }
+        });
       });
     });
-  });
+  }
 
 
 
@@ -151,18 +153,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const optionsList = document.querySelectorAll(".option");
 
-  selectInput.addEventListener("click", () => {
-    optionsContainer.classList.toggle("active");
-    arrow.classList.toggle("active");
-  });
-
-  optionsList.forEach((option) => {
-    option.addEventListener("click", () => {
-      selectedOption.innerHTML = option.innerHTML;
-      optionsContainer.classList.remove("active");
-      arrow.classList.remove("active");
+  if (selectInput) {
+    selectInput.addEventListener("click", () => {
+      optionsContainer.classList.toggle("active");
+      arrow.classList.toggle("active");
     });
-  });
+  }
+
+  if (optionsList.length) {
+    optionsList.forEach((option) => {
+      option.addEventListener("click", () => {
+        selectedOption.innerHTML = option.innerHTML;
+        optionsContainer.classList.remove("active");
+        arrow.classList.remove("active");
+      });
+    });
+  }
 
   document.addEventListener("click", (event) => {
     const isClickInside = selectInput.contains(event.target);

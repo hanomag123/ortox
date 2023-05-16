@@ -1,0 +1,152 @@
+<section
+  class="breadcrumbs-custom bg-image context-dark"
+  style="background-image: url(images/breadcrumbs-image-1.jpg);"
+>
+  <div class="breadcrumbs-custom-inner">
+    <div class="container breadcrumbs-custom-container">
+      <ul class="breadcrumbs-custom-path">
+  <li><a href="/">Главная</a></li>
+    </ul>
+      <div class="breadcrumbs-custom-main">
+        <h1 class="breadcrumbs-custom-title">Контакты</h1>
+        <div class="breadcrumbs-custom-subtitle title-decorated"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section section-sm bg-color-3">
+  <div class="container">
+    <div class="layout-bordered">
+      <div class="layout-bordered-item wow-outer">
+        <div class="layout-bordered-item-inner wow slideInUp">
+          <div class="icon icon-lg linearicons-telephone2 text-primary"></div>
+          <ul class="list-0">
+            <li><a class="link-default-2" href="tel:8 (800) 222 83 31">8 (800) 222 83 31</a></li>
+            <li><a class="link-default-2" href="tel:8 (929) 833 53 38">8 (929) 833 53 38</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="layout-bordered-item wow-outer">
+        <div class="layout-bordered-item-inner wow slideInUp">
+          <div class="icon icon-lg linearicons-envelope text-primary"></div><a class="link-default-2" href="mailto:info@ortox-clinic.ru">info@ortox-clinic.ru</a>
+        </div>
+      </div>
+      <div class="layout-bordered-item wow-outer">
+        <div class="layout-bordered-item-inner wow slideInUp">
+          <div class="icon icon-lg mdi linearicons-location text-primary"></div><a class="link-default-2" href="#">г.Краснодар, ул.Северная, 465</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section bg-primary-lighten">
+  <div class="range justify-content-xl-between">
+    <div class="cell-xl-6 align-self-center container">
+      <div class="row">
+        <div class="col-lg-9 cell-inner">
+          <div class="section-lg">
+            <h3 class="wow-outer"><span class="wow slideInDown">Напишите нам</span></h3>
+            <form
+              class="rd-form rd-form-custom rd-mailform"
+              data-form-output="form-output-global"
+              method="post"
+              action="/feedback/getadd"
+            >
+              <input type="hidden" name="csrf_protection" value="646333909a479">              <input type="hidden" name="formtype" value="Форма заявки: Контакты">
+              <div class="row row-10">
+                <div class="col-md-12">
+                  <div class="form-wrap wow fadeSlideInUp">
+                    <label class="form-label-outside" for="contact-first-name">ФИО</label>
+                    <input class="form-input" id="contact-first-name" type="text" name="extra[name]" data-constraints="@Required">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-wrap wow fadeSlideInUp">
+                    <label class="form-label-outside" for="contact-email">E-mail</label>
+                    <input class="form-input" id="contact-email" type="email" name="extra[email]" data-constraints="@Email @Required">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-wrap wow fadeSlideInUp">
+                    <label class="form-label-outside" for="contact-phone">Номер телефона</label>
+                    <input class="form-input" id="contact-phone" type="text" name="extra[phone]" data-constraints="@PhoneNumber">
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-wrap wow fadeSlideInUp">
+                    <label class="form-label-outside" for="contact-message">Текст заявки</label>
+                    <textarea class="form-input" id="contact-message" name="message"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="group group-sm d-flex align-items-center">
+                <div class="wow-outer">
+                  <button class="button button-lg button-lg--bigger button-primary-lighten button-winona wow slideInRight" type="submit">Отправить заявку</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cell-xl-5 wow fadeIn map-responsive">
+      <div class="map-container">
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa4cc2425b29f41a64a53b44ed891f277f3b4b49bb34127a39be582e3f4657752&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"></script>
+      </div>
+    </div>
+    <style>
+      .map-responsive {}
+
+      @media (max-width: 1199px) {
+        .map-responsive {
+          height: 0 !important;
+          overflow: hidden !important;
+          position: relative !important;
+          padding-top: calc(9 / 16 * 100%);
+        }
+      }
+
+      .map-responsive .map-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+  </div>
+</section>
+<section class="section bg-primary-lighten">
+  <div class="range justify-content-xl-between">
+    <div class="cell-xl-7 wow fadeIn">
+      <img src="./assets/images/contacts/ortox.jpg" alt="" srcset="">
+    </div>
+    <div class="cell-xl-5 align-self-center container">
+      <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10">
+          <div class="ms-md-5 my-x3 py-3 my-lg-0 py-lg-0">
+            <h3 class="wow-outer mb-4"><span class="wow slideInDown">К нам легко добраться  и всегда можно припарковать машину</span></h3>
+            <div class="t570__contentwrapper t570__padding_lg">
+              <div class="mt-3">
+                Звоните:
+                <a href="tel:8 (800) 222 83 31"><br>8 (800) 222 83 31</a>
+                <a href="tel:8 (929) 833 53 38"><br>8 (929) 833 53 38</a>
+              </div>
+              <div class="mt-3">
+                Ждем ваши письма:<br />
+                <a href="mailto:info@ortox-clinic.ru">info@ortox-clinic.ru</a>
+              </div>
+              <div class="mt-3">
+                <p>г.Краснодар, ул.Северная, 465</p>
+                <p>Работаем 7 дней в неделю:<br>10:00 - 20:00</p>
+              </div> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<hr>   
