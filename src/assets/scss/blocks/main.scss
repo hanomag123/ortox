@@ -1641,8 +1641,32 @@ textarea.modal-textared {
 }
 
 .menu-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 3.5rem;
-  padding: 0 4rem;
+  display: none;
+  @include breakpoint($xl-bp) {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+    padding: 0 4rem;
+  }
+}
+
+.rd-navbar-toggle {
+  @include breakpoint($xl-bp) {
+    position: fixed;
+    top: 2rem;
+    right: 1rem;
+    z-index: 2000; 
+  }
+}
+
+header {
+  @include breakpoint($xl-bp) {
+    height: 0;
+  }
+
+  .rd-navbar-panel {
+    @include breakpoint($xl-bp) {
+      flex-direction: row;
+    }
+  }
 }
