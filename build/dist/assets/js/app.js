@@ -171,10 +171,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   document.addEventListener("click", (event) => {
-    const isClickInside = selectInput.contains(event.target);
-    if (!isClickInside) {
-      optionsContainer.classList.remove("active");
-      arrow.classList.remove("active");
+    if (selectInput) {
+      const isClickInside = selectInput.contains(event.target);
+
+      if (!isClickInside) {
+        optionsContainer.classList.remove("active");
+        arrow.classList.remove("active");
+      }
     }
   });
 

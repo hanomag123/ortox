@@ -1,11 +1,13 @@
-.rd-navbar-static.rd-navbar--is-stuck, .rd-navbar-static.rd-navbar--is-clone {
+.rd-navbar-static.rd-navbar--is-stuck,
+.rd-navbar-static.rd-navbar--is-clone {
   background-color: transparent;
 }
+
 .rd-navbar-corporate.rd-navbar-static .rd-navbar-main-outer {
   background-color: transparent;
   background: rgba(249, 255, 255, 0.8);
   backdrop-filter: blur(0.9rem);
-  transform: translate3d(0,0,0);
+  transform: translate3d(0, 0, 0);
   position: absolute;
   width: 100%;
   z-index: 111;
@@ -18,6 +20,7 @@
   padding-bottom: 25.4rem;
 
   padding-left: 13.4rem;
+
   @include breakpoint($cos-bp) {
     padding-top: 21rem;
     padding-bottom: 29.4rem;
@@ -45,6 +48,7 @@
     margin-bottom: 4.5rem;
     margin-top: 6.9rem;
   }
+
   @include breakpoint($sm-bp) {
     margin-top: 5.9rem;
   }
@@ -59,6 +63,7 @@
 .main-title {
   max-width: 80.3rem;
   margin-top: 0.5rem;
+
   @include breakpoint($cos-bp) {
     margin-top: 1rem;
     max-width: 55.5rem;
@@ -89,13 +94,13 @@
   @include breakpoint($sm-bp) {
     margin-left: 0rem !important;
     font-size: 1.5rem;
-  line-height: 3rem;
+    line-height: 3rem;
   }
 }
 
 .page-button-light {
-  padding: 1.5rem 3rem; 
-  background-color: var(--lgrey); 
+  padding: 1.5rem 3rem;
+  background-color: var(--lgrey);
   border-radius: 0.5rem;
   font-family: 'Open Sans';
   font-style: normal;
@@ -103,8 +108,8 @@
   font-size: 2rem;
   line-height: 3rem;
   /* identical to box height, or 152% */
-  
-  
+
+
   color: var(--green);
   display: inline-block;
   border: 0.1rem solid var(--green);
@@ -147,6 +152,7 @@
   font-weight: 400;
   font-size: 2.5rem;
   line-height: 5.2rem;
+
   @include breakpoint($cos-bp) {
     font-size: 2.1rem;
     line-height: 4.5rem;
@@ -212,6 +218,7 @@
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(0.5rem);
   transform: translate3d(0, 0, 0);
+
   @include breakpoint($cos-bp) {
     width: 13rem;
   }
@@ -219,6 +226,7 @@
   @include breakpoint($sm-bp) {
     width: 15rem;
   }
+
   a {
     padding: 1rem;
     display: flex;
@@ -233,6 +241,7 @@
   width: 6.4rem;
   height: 6.4rem;
   margin-top: 2.5rem;
+
   img {
     width: 100%;
     height: 100%;
@@ -244,7 +253,7 @@
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 500;
-  font-size: 1.2rem; 
+  font-size: 1.2rem;
   line-height: 2rem;
   /* or 156% */
 
@@ -253,6 +262,7 @@
   /* Text */
 
   color: var(--black);
+
   @include breakpoint($cos-bp) {
     font-size: 1.4rem;
   }
@@ -310,6 +320,7 @@
 
   .next {
     right: 29rem;
+
     @include breakpoint($cos-bp) {
       right: 3rem;
     }
@@ -317,6 +328,7 @@
 
   .prev {
     left: 29rem;
+
     @include breakpoint($cos-bp) {
       left: 3rem;
     }
@@ -325,6 +337,7 @@
   .swiper-pagination {
     position: static;
     margin-top: 4.5rem;
+
     @include breakpoint($cos-bp) {
       margin-top: 3.5rem;
     }
@@ -336,6 +349,7 @@
     padding-left: 9rem;
     padding-right: 9rem;
   }
+
   .swiper-slide {
     margin-right: 36rem;
     background: linear-gradient(180deg, #00B7B2 0%, #009B97 100%);
@@ -379,6 +393,7 @@
   padding-right: 8rem;
   position: relative;
   z-index: 1;
+
   @include breakpoint($cos-bp) {
     padding-right: 7rem;
     padding-bottom: 13rem;
@@ -392,6 +407,7 @@
 
 .actions-button {
   margin-top: 4.8rem;
+
   @include breakpoint($cos-bp) {
     margin-top: 3.8rem;
     font-size: 1.5rem;
@@ -442,10 +458,12 @@
   opacity: 1;
   border-radius: 0.65rem;
   transition: all .3s;
+
   @include breakpoint($cos-bp) {
     width: 1.1rem;
     height: 1.1rem;
   }
+
   &.swiper-pagination-bullet-active {
     width: 2.6rem;
     background-color: #009B97;
@@ -458,8 +476,8 @@
 
 .aboutus-block {
   @include breakpoint($sm-bp) {
-    padding-left: 0!important;
-    padding-right: 0!important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 }
 
@@ -467,11 +485,13 @@
   position: relative;
   display: grid;
   grid-template-columns: max-content 1fr;
+
   @include breakpoint($sm-bp) {
     grid-template-columns: repeat(1, 1fr);
     background: var(--lgrey);
     border-radius: 3rem;
   }
+
   &::before,
   &::after {
     content: '';
@@ -486,6 +506,7 @@
     @include breakpoint($bm-bp) {
       width: 9rem;
     }
+
     @include breakpoint($sm-bp) {
       left: 2rem;
     }
@@ -510,6 +531,7 @@
   height: 100%;
   width: 44.8rem;
   z-index: 1;
+
   @include breakpoint($cos-bp) {
     height: 92%;
     left: 11rem;
@@ -519,9 +541,11 @@
     width: 29.5rem;
     left: 2rem;
   }
+
   @include breakpoint($sm-bp) {
     width: 27.5rem;
   }
+
   img {
     width: 100%;
     height: 100%;
@@ -534,9 +558,10 @@
   background: linear-gradient(180deg, #00B7B2 0%, #009B97 100%);
   border-radius: 0.3rem 7rem 7rem 2rem;
   height: 100%;
-  width: 44.3rem; 
+  width: 44.3rem;
   position: relative;
   margin-left: 6.9rem;
+
   // overflow: hidden;
   @include breakpoint($cos-bp) {
     width: 42.3rem;
@@ -546,6 +571,7 @@
     width: 29.2rem;
     margin-left: 4.6rem;
   }
+
   @include breakpoint($sm-bp) {
     height: 46.4rem;
     margin-left: 6.6rem;
@@ -559,6 +585,7 @@
     height: 100%;
     overflow: hidden;
     border-radius: 0.3rem 7rem 7rem 2rem;
+
     &::before {
       content: '';
       position: absolute;
@@ -578,6 +605,7 @@
   border-radius: 7rem;
   padding: 7rem 10.6rem 4.4rem 9.5rem;
   position: relative;
+
   @include breakpoint($cos-bp) {
     padding-top: 4.8rem;
     padding-right: 7.6rem;
@@ -599,6 +627,7 @@
     z-index: -1;
   }
 }
+
 .aboutus-title {
   font-family: 'Montserrat';
   font-style: normal;
@@ -606,10 +635,10 @@
   font-size: 3.4rem;
   line-height: 3.8rem;
   /* or 110% */
-  
-  
+
+
   /* Text */
-  
+
   color: var(--black);
 
   @include breakpoint($bm-bp) {
@@ -617,6 +646,7 @@
     line-height: 2.3rem;
   }
 }
+
 .aboutus-text,
 .aboutus-signature {
   font-family: 'Montserrat';
@@ -629,6 +659,7 @@
 
 .aboutus-text {
   margin-top: 2rem;
+
   @include breakpoint($cos-bp) {
     margin-top: 1rem;
   }
@@ -637,7 +668,7 @@
     font-size: 1.3rem;
     line-height: 1.6rem;
   }
-} 
+}
 
 .aboutus-signature {
   display: flex;
@@ -650,9 +681,11 @@
     margin-top: 0.9rem;
   }
 }
+
 .signature {
   width: 12.8rem;
   height: 5.3rem;
+
   img {
     width: 100%;
     height: 100%;
@@ -664,6 +697,7 @@
   padding-right: 4rem;
   padding-left: 3rem;
   position: relative;
+
   @include breakpoint($cos-bp) {
     margin-top: 5.4rem;
   }
@@ -675,7 +709,7 @@
 
   .arrow-button {
     position: absolute;
-    top: 23rem; 
+    top: 23rem;
     z-index: 2;
 
     @include breakpoint($bm-bp) {
@@ -690,15 +724,18 @@
   .prev {
     left: -1.5rem;
   }
+
   .swiper-pagination {
     position: static;
     margin-top: 6.7rem;
   }
+
   .swiper-slide {
     // margin-right: 4rem;
     width: 34.1rem;
     display: flex;
     flex-direction: column;
+
     @include breakpoint($cos-bp) {
       width: 32.5rem;
     }
@@ -713,6 +750,7 @@
   width: 100%;
   height: 39.8rem;
   position: relative;
+
   &::before {
     content: '';
     width: 100%;
@@ -723,6 +761,7 @@
     background: linear-gradient(180deg, #00CEC9 0%, #00A49F 100%);
     border-radius: 7rem;
   }
+
   img {
     width: 100%;
     height: 100%;
@@ -737,6 +776,7 @@
 .specialists-prof,
 .specialists-exp {
   padding-left: 4.8rem;
+
   @include breakpoint($cos-bp) {
     padding-left: 3rem;
   }
@@ -748,9 +788,10 @@
   font-weight: 600;
   font-size: 2.4rem;
   line-height: 4.5rem;
-  
+
   color: var(--black);
   margin-top: 2rem;
+
   @include breakpoint($cos-bp) {
     font-size: 2.8rem;
     margin-top: 1.6rem;
@@ -821,6 +862,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
   @include breakpoint($cos-bp) {
     padding-left: 18rem;
     padding-right: 18rem;
@@ -846,7 +888,7 @@
   font-weight: 500;
   font-size: 2.6rem;
   line-height: 2.3rem;
-  
+
   color: var(--black);
   text-align: center;
 
@@ -878,6 +920,7 @@
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+
   @include breakpoint($sm-bp) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -892,20 +935,25 @@
   width: 100%;
   border-radius: 2rem;
   overflow: hidden;
+
   @include breakpoint($sm-bp) {
     height: 100%;
   }
+
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
+
   &.--bot {
     height: 30.8rem;
     background-color: #009B97;
+
     @include breakpoint($sm-bp) {
       height: 100%;
     }
+
     img {
       mix-blend-mode: hard-light;
     }
@@ -918,13 +966,16 @@
   font-weight: 500;
   font-size: 1.8rem;
   line-height: 2.3rem;
-  
+
   color: var(--green);
+
   @include breakpoint($sm-bp) {
     text-align: center;
   }
+
   &.--bot {
     order: 4;
+
     @include breakpoint($sm-bp) {
       order: unset;
 
@@ -963,6 +1014,7 @@
     padding: 0rem 3rem 0rem;
   }
 }
+
 .consult-bg-text {
   width: 100%;
   height: 20.8rem;
@@ -978,30 +1030,33 @@
   max-width: 37.1rem;
   margin-left: auto;
   margin-right: 2rem;
+
   @include breakpoint($cos-bp) {
     margin-right: 0;
   }
 }
+
 .consult-title {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 600;
   font-size: 2.4rem;
   line-height: 2rem;
-  
+
   color: var(--white);
 
   @include breakpoint($sm-bp) {
     font-size: 2rem;
-  }  
+  }
 }
+
 .consult-list {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 500;
   font-size: 1.6rem;
   line-height: 2rem;
-  
+
   color: #C2FFFD;
   margin-top: 3.2rem;
   display: flex;
@@ -1012,6 +1067,7 @@
     gap: 2rem;
   }
 }
+
 .consult-item {
   display: grid;
   grid-template-columns: 22.6rem 9rem;
@@ -1030,7 +1086,7 @@
       font-weight: 500;
       font-size: 2.2rem;
       line-height: 2rem;
-      
+
       color: #C2FFFD;
 
       @include breakpoint($sm-bp) {
@@ -1085,20 +1141,26 @@
 
 .reviews__swiper {
   overflow: visible;
+
   .swiper-slide {
     margin-right: 4rem;
     width: 34.3rem;
     height: 27.4rem;
+
     @include breakpoint($cos-bp) {
       width: 32rem;
     }
+
     @include breakpoint($xl-bp) {
       width: 30.5rem;
     }
+
     @include breakpoint($sm-bp) {
       width: 100%;
     }
+
     cursor: pointer;
+
     &.hover {
       .reviews-text {
         max-height: 200vh;
@@ -1106,11 +1168,13 @@
     }
   }
 }
+
 .reviews-slide-wrapper {
   border-radius: 2rem;
   background: var(--lgrey);
   padding: 2.2rem 2.3rem 2.4rem 3rem;
 }
+
 .reviews-text {
   transition: max-height .3s;
   max-height: 18.3rem;
@@ -1122,10 +1186,12 @@
   padding-right: 6rem;
   margin-top: 8rem;
   position: relative;
+
   @include breakpoint($cos-bp) {
     padding-left: 5rem;
     padding-right: 5rem;
   }
+
   @include breakpoint($xl-bp) {
     padding-left: 3rem;
     padding-right: 3rem;
@@ -1141,7 +1207,7 @@
     content: '';
     height: 200vh;
     width: 100%;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 1.48%); 
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 1.48%);
     border-radius: 2rem;
     position: absolute;
     top: 0;
@@ -1152,23 +1218,26 @@
       height: 100vh;
     }
   }
+
   &::after {
     content: '';
     height: 200vh;
     width: 100%;
-    background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 1.48%); 
+    background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 1.48%);
     border-radius: 2rem;
     position: absolute;
     top: 0;
     right: 100%;
     z-index: 10;
+
     @include breakpoint($sm-bp) {
       height: 100vh;
     }
   }
+
   .arrow-button {
     position: absolute;
-    top: 10.7rem; 
+    top: 10.7rem;
     z-index: 2;
   }
 
@@ -1182,10 +1251,12 @@
 
   .prev {
     left: 1.5rem;
+
     @include breakpoint($bm-bp) {
       display: none;
     }
   }
+
   .swiper-pagination {
     position: static;
     margin-top: 6.7rem;
@@ -1200,8 +1271,8 @@
   font-size: 1.4rem;
   line-height: 2.3rem;
   /* or 164% */
-  
-  
+
+
   color: var(--black);
 }
 
@@ -1209,6 +1280,7 @@
   padding-top: 1rem;
   margin-top: 1.5rem;
   position: relative;
+
   &::before {
     content: '';
     position: absolute;
@@ -1218,7 +1290,7 @@
     height: 0.1rem;
     background-color: var(--black);
   }
-  
+
   color: #676767;
 }
 
@@ -1275,26 +1347,31 @@
   font-weight: 400;
   font-size: 1.8rem;
   line-height: 2rem;
-  
+
   color: rgba(0, 56, 55, 0.4);
   background: var(--white);
   border: 0.1rem solid rgba(0, 155, 151, 0.31);
   border-radius: 1rem;
   padding: 2.5rem 2.8rem 2.3rem;
+
   &::placeholder {
     color: rgba(0, 56, 55, 0.4);
   }
+
   &.--b-green {
     border-color: #009B97;
   }
 }
+
 textarea.page-input {
   resize: none;
   grid-column: 2 span;
 }
+
 .callback-textarea {
   min-height: 19.7rem;
 }
+
 .callback-button {
   width: max-content;
 
@@ -1353,9 +1430,11 @@ textarea.page-input {
   overflow: auto;
   position: relative;
   max-width: 102.8rem;
+
   @include breakpoint($xl-bp) {
     padding: 6rem 4rem;
   }
+
   @include breakpoint($sm-bp) {
     padding: 4rem 2rem;
   }
@@ -1366,9 +1445,11 @@ textarea.page-input {
   grid-template-columns: 30rem 1fr;
   column-gap: 3rem;
   margin-top: 5rem;
+
   @include breakpoint($xl-bp) {
     grid-template-columns: 1fr 1fr;
   }
+
   @include breakpoint($sm-bp) {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -1382,7 +1463,7 @@ textarea.page-input {
   font-weight: 500;
   font-size: 1.6rem;
   line-height: 2.5rem;
-  
+
   color: #A8A8A8;
 }
 
@@ -1395,7 +1476,7 @@ textarea.page-input {
   font-weight: 500;
   font-size: 1.6rem;
   line-height: 2.5rem;
-  
+
   color: #A8A8A8;
   position: relative;
   user-select: none;
@@ -1407,8 +1488,10 @@ textarea.page-input {
     left: 0;
     pointer-events: none;
     opacity: 0;
-    &:checked + .checkbox {
+
+    &:checked+.checkbox {
       background-color: red;
+
       &::after {
         opacity: 1;
       }
@@ -1421,6 +1504,7 @@ textarea.page-input {
     height: 1.4rem;
     display: inline-block;
     position: relative;
+
     &:after {
       content: '';
       background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.5 6.5L6 11.5L12.5 1' stroke='%23009B97' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E%0A");
@@ -1434,6 +1518,7 @@ textarea.page-input {
       opacity: 0;
       transition: opacity .3s;
     }
+
     &:before {
       content: '';
       width: 1rem;
@@ -1458,14 +1543,15 @@ textarea.page-input {
   font-size: 1.8rem;
   line-height: 3rem;
   /* identical to box height, or 169% */
-  
-  
+
+
   color: #009B97;
   padding: 1.5rem 3rem;
   width: max-content;
   max-width: 100%;
   border: 0;
   margin-top: 3rem;
+
   @include breakpoint($sm-bp) {
     width: 100%;
     grid-column: 2 span;
@@ -1477,6 +1563,7 @@ textarea.page-input {
   grid-template-columns: repeat(2, 1fr);
   margin-top: 2rem;
   grid-column: 2 span;
+
   @include breakpoint($sm-bp) {
     grid-column: 1 span;
     margin-top: 0;
@@ -1498,13 +1585,15 @@ textarea.page-input {
   border: 0;
   background-color: transparent;
   padding: 0;
+
   @include breakpoint($sm-bp) {
     top: 2rem;
     right: 2rem;
   }
+
   svg {
     width: 100%;
-    height: 100%; 
+    height: 100%;
   }
 }
 
@@ -1512,6 +1601,7 @@ textarea.page-input {
   display: flex;
   gap: 1.4rem;
   align-items: center;
+
   svg {
     width: 2.1rem;
     height: 2.1rem;
@@ -1522,9 +1612,11 @@ textarea.modal-textared {
   margin-top: 3rem;
   grid-column: 2 span;
   height: 21.9rem;
+
   @include breakpoint($xl-bp) {
     height: 10rem;
   }
+
   @include breakpoint($sm-bp) {
     grid-column: 1 span;
     margin-top: 0;
@@ -1537,7 +1629,7 @@ textarea.modal-textared {
   font-weight: 400;
   font-size: 2rem;
   line-height: 3.2rem;
-  
+
   color: #434343;
 
   a {
@@ -1547,7 +1639,7 @@ textarea.modal-textared {
     font-weight: 400;
     font-size: 2rem;
     line-height: 3rem;
-    
+
     color: #009B97;
   }
 }
@@ -1570,31 +1662,34 @@ textarea.modal-textared {
   font-size: 1.6rem;
   line-height: 4.6rem;
   /* identical to box height, or 284% */
-  
-  
+
+
   /* Text */
-  
+
   color: #003837;
-  
+  @include breakpoint($xl-bp) {
+    line-height: 2.2rem;
+  }
 }
 
 .rd-navbar-fixed .rd-nav-link {
   @include breakpoint($xl-bp) {
-    padding-left: 4rem;
-    padding-right: 4rem; 
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 }
 
-.rd-navbar-fixed .rd-navbar-search .form-input{
+.rd-navbar-fixed .rd-navbar-search .form-input {
   border-radius: 0;
   border: 0;
   border-bottom: 0.5px solid rgba(0, 56, 55, 0.2);
-}   
+}
 
 .rd-navbar-corporate.rd-navbar-fixed .rd-navbar-search {
   @include breakpoint($xl-bp) {
     margin: 2rem 4rem;
     margin-right: 2rem;
+    margin-left: 4.8rem;
   }
 }
 
@@ -1620,6 +1715,7 @@ textarea.modal-textared {
       text-align: start;
     }
   }
+
   .header-content__phoneContainer {
     @include breakpoint($xl-bp) {
       display: flex;
@@ -1631,31 +1727,40 @@ textarea.modal-textared {
       font-weight: 400;
       font-size: 1.6rem;
       line-height: 2rem;
-      
-      
+
+
       a {
         color: var(--green);
       }
+    }
+    @include breakpoint($sm-bp) {
+      gap: 3.2rem;
     }
   }
 }
 
 .menu-wrapper {
   display: none;
+
   @include breakpoint($xl-bp) {
     display: flex;
     flex-direction: column;
     gap: 3.5rem;
-    padding: 0 4rem;
+    padding: 0 4.6rem;
+  }
+  @include breakpoint($sm-bp) {
+    gap: 2.3rem;
   }
 }
+
+
 
 .rd-navbar-toggle {
   @include breakpoint($xl-bp) {
     position: fixed;
     top: 2rem;
     right: 1rem;
-    z-index: 2000; 
+    z-index: 2000;
   }
 }
 
@@ -1669,4 +1774,127 @@ header {
       flex-direction: row;
     }
   }
+
+  .rd-navbar-corporate.rd-navbar-static .rd-navbar-main {
+    padding: 0.8rem 0;
+  }
+
+  .rd-navbar-corporate.rd-navbar-static .rd-navbar-aside {
+    padding: 3.3rem 0 3rem;
+  }
 }
+
+.rd-navbar-static .rd-navbar-search-toggle {
+  position: absolute;
+  top: 6%;
+  right: -5%;
+  z-index: 2;
+  pointer-events: none;
+}
+.rd-navbar-static .rd-navbar-search-toggle span {
+  font-size: 2.1rem;
+}
+.rd-navbar-static .rd-navbar-search {
+  
+  .form-label.rd-input-label {
+    padding: 0;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    /* identical to box height, or 325% */
+    
+    top: 50%;
+    color: rgba(0, 56, 55, 0.45);
+  }
+  .form-input {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    padding: 0.4rem 0;
+    min-height: 0;
+    border: 0;
+    border-bottom: 0.05rem solid rgba(0, 56, 55, 0.7);
+    border-radius: 0;
+    background: transparent;
+    padding-right: 2rem;
+    &::placeholder {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 1.4rem;
+      line-height: 2rem;
+      /* identical to box height, or 325% */
+
+
+      color: rgba(0, 56, 55, 0.45);
+    }
+  }
+
+  .rd-search {
+    opacity: 1;
+    position: static;
+    visibility: visible;
+    margin-top: 0;
+    z-index: 1;
+    width: 21.3rem;
+  }
+}
+
+.rd-navbar-fixed .rd-navbar-nav-wrap {
+  @include breakpoint($sm-bp) {
+    padding-top: 8.4rem;
+    width: 30rem;
+  }
+}
+
+.form-input {
+  @include breakpoint($xl-bp) {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    padding: 0.4rem 0;
+    min-height: 0;
+    border: 0;
+    border-bottom: 0.05rem solid rgba(0, 56, 55, 0.7);
+    border-radius: 0;
+    background: transparent;
+    padding-right: 2rem;
+    &::placeholder {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 1.4rem;
+      line-height: 2rem;
+      /* identical to box height, or 325% */
+
+
+      color: rgba(0, 56, 55, 0.45);
+    }
+  }
+}
+.form-label.rd-input-label {
+  @include breakpoint($xl-bp) {
+    padding: 0;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    /* identical to box height, or 325% */
+    
+    top: 50%;
+    color: rgba(0, 56, 55, 0.45);
+  }
+}
+
+// .rd-navbar-fixed .rd-navbar-submenu-toggle {
+//   @include breakpoint($xl-bp) {
+//     display: none;
+//   }
+// }

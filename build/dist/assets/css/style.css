@@ -510,7 +510,8 @@ html {
   }
 }
 
-.rd-navbar-static.rd-navbar--is-stuck, .rd-navbar-static.rd-navbar--is-clone {
+.rd-navbar-static.rd-navbar--is-stuck,
+.rd-navbar-static.rd-navbar--is-clone {
   background-color: transparent;
 }
 
@@ -2164,11 +2165,16 @@ textarea.modal-textared {
   /* Text */
   color: #003837;
 }
+@media (max-width: 1024px) {
+  .rd-nav-link {
+    line-height: 2.2rem;
+  }
+}
 
 @media (max-width: 1024px) {
   .rd-navbar-fixed .rd-nav-link {
-    padding-left: 4rem;
-    padding-right: 4rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 }
 
@@ -2182,6 +2188,7 @@ textarea.modal-textared {
   .rd-navbar-corporate.rd-navbar-fixed .rd-navbar-search {
     margin: 2rem 4rem;
     margin-right: 2rem;
+    margin-left: 4.8rem;
   }
 }
 
@@ -2219,6 +2226,11 @@ textarea.modal-textared {
     color: var(--green);
   }
 }
+@media (max-width: 500px) {
+  .rd-navbar-nav-wrap .header-content__phoneContainer {
+    gap: 3.2rem;
+  }
+}
 
 .menu-wrapper {
   display: none;
@@ -2228,7 +2240,12 @@ textarea.modal-textared {
     display: flex;
     flex-direction: column;
     gap: 3.5rem;
-    padding: 0 4rem;
+    padding: 0 4.6rem;
+  }
+}
+@media (max-width: 500px) {
+  .menu-wrapper {
+    gap: 2.3rem;
   }
 }
 
@@ -2249,6 +2266,114 @@ textarea.modal-textared {
 @media (max-width: 1024px) {
   header .rd-navbar-panel {
     flex-direction: row;
+  }
+}
+header .rd-navbar-corporate.rd-navbar-static .rd-navbar-main {
+  padding: 0.8rem 0;
+}
+header .rd-navbar-corporate.rd-navbar-static .rd-navbar-aside {
+  padding: 3.3rem 0 3rem;
+}
+
+.rd-navbar-static .rd-navbar-search-toggle {
+  position: absolute;
+  top: 6%;
+  right: -5%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.rd-navbar-static .rd-navbar-search-toggle span {
+  font-size: 2.1rem;
+}
+
+.rd-navbar-static .rd-navbar-search .form-label.rd-input-label {
+  padding: 0;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  /* identical to box height, or 325% */
+  top: 50%;
+  color: rgba(0, 56, 55, 0.45);
+}
+.rd-navbar-static .rd-navbar-search .form-input {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  padding: 0.4rem 0;
+  min-height: 0;
+  border: 0;
+  border-bottom: 0.05rem solid rgba(0, 56, 55, 0.7);
+  border-radius: 0;
+  background: transparent;
+  padding-right: 2rem;
+}
+.rd-navbar-static .rd-navbar-search .form-input::placeholder {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  /* identical to box height, or 325% */
+  color: rgba(0, 56, 55, 0.45);
+}
+.rd-navbar-static .rd-navbar-search .rd-search {
+  opacity: 1;
+  position: static;
+  visibility: visible;
+  margin-top: 0;
+  z-index: 1;
+  width: 21.3rem;
+}
+
+@media (max-width: 500px) {
+  .rd-navbar-fixed .rd-navbar-nav-wrap {
+    padding-top: 8.4rem;
+    width: 30rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .form-input {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    padding: 0.4rem 0;
+    min-height: 0;
+    border: 0;
+    border-bottom: 0.05rem solid rgba(0, 56, 55, 0.7);
+    border-radius: 0;
+    background: transparent;
+    padding-right: 2rem;
+  }
+  .form-input::placeholder {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    /* identical to box height, or 325% */
+    color: rgba(0, 56, 55, 0.45);
+  }
+}
+
+@media (max-width: 1024px) {
+  .form-label.rd-input-label {
+    padding: 0;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    /* identical to box height, or 325% */
+    top: 50%;
+    color: rgba(0, 56, 55, 0.45);
   }
 }
 
