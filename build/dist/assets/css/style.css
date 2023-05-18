@@ -456,7 +456,7 @@ textarea {
 
 ::-webkit-scrollbar-thumb {
   background-color: var(--green);
-  border-radius: 1rem;
+  border-radius: 0.2rem;
 }
 
 html {
