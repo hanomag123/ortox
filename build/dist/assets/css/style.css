@@ -750,6 +750,7 @@ html {
   align-items: center;
   min-height: 18rem;
   gap: 2rem;
+  white-space: normal;
 }
 
 .services-img {
